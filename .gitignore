@@ -114,14 +114,16 @@ dmypy.json
 .pyre/
 
 # Project-specific ignores
-# Database files
-data/
+# Database files (allow folders but exclude contents)
+data/*
+!data/.gitkeep
 *.db
 *.sqlite
 *.sqlite3
 
-# Output files (images, audio recordings, visualizations)
-output/
+# Output files (allow folders but exclude contents)
+output/*
+!output/.gitkeep
 *.png
 *.jpg
 *.jpeg
@@ -132,7 +134,9 @@ output/
 *.m4a
 
 # Music files (if you have a music directory for testing)
-music/
+music/*
+!music/.gitkeep
+*.mp3
 *.aac
 *.ogg
 *.wma
