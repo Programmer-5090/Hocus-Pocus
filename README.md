@@ -1,6 +1,6 @@
 # Hocus Pocus - Audio Identification System
 
-> *Inspired by Shazam's magic, Hocus Pocus brings real-time audio identification to your fingertips*
+> *Inspired by Shazam, Hocus Pocus brings real-time audio identification to your fingertips*
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -250,6 +250,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by the original [Shazam algorithm](https://www.ee.columbia.edu/~dpwe/papers/Wang03-shazam.pdf)
 - Built with passion for audio processing and music technology
 - Thanks to the open-source community for amazing libraries
+
+### References and Resources
+
+- [How Does Shazam Work?](https://www.cameronmacleod.com/blog/how-does-shazam-work) - Cameron MacLeod's detailed explanation
+- [Audio Fingerprinting Research Paper](https://drive.google.com/file/d/1ahyCTXBAZiuni6RTzHzLoOwwfTRFaU-C/view) - Academic research on audio fingerprinting
+- [Audio Fingerprinting Project Report](https://hajim.rochester.edu/ece/sites/zduan/teaching/ece472/projects/2019/AudioFingerprinting.pdf) - University of Rochester ECE Department
+- [Shazam Algorithm Explained (Video)](https://www.youtube.com/watch?v=a0CVCcb0RJM&t=62s) - Visual explanation of the algorithm
 
 ## Support
 
