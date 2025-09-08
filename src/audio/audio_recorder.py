@@ -78,7 +78,7 @@ class AudioRecorder:
                 frames_per_buffer=self.chunk_size
             )
 
-            print(f"🎤 Recording audio for {self.duration} seconds...")
+            print(f"Recording audio for {self.duration} seconds...")
             
             # Calculate total number of chunks needed
             total_chunks = int(self.sample_rate / self.chunk_size * self.duration)
@@ -90,11 +90,11 @@ class AudioRecorder:
                     audio_data = stream.read(self.chunk_size, exception_on_overflow=False)
                     audio_frames.append(audio_data)
                 except IOError as e:
-                    print(f"⚠️  Warning: Audio buffer overflow (chunk {chunk_num}): {e}")
+                    print(f"Warning: Audio buffer overflow (chunk {chunk_num}): {e}")
                     continue
-
-            print("✅ Recording completed successfully.")
-
+                    
+            print("Recording completed successfully.")
+            
         except Exception as e:
             raise RuntimeError(f"Failed to record audio: {e}")
             
@@ -109,7 +109,7 @@ class AudioRecorder:
         # Save recorded audio to WAV file
         self._save_audio_file(audio_frames, audio_interface)
         
-        print(f"💾 Audio saved to: {self.filename}")
+        print(f"Audio saved to: {self.filename}")
         return self.filename
     
     def _save_audio_file(self, audio_frames: list, audio_interface: pyaudio.PyAudio) -> None:

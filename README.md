@@ -1,4 +1,21 @@
-# Hocus Pocus - Audio Identification System
+# Hocus Pocus - Terminal-Based Audio Identification System
+
+> *Inspired by Shazam, Hocus Pocus brings real-time audio identification to your command line*
+
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Audio Formats](https://img.shields.io/badge/Audio-MP3%20|%20WAV%20|%20FLAC%20|%20M4A-orange)](README.md#supported-formats)
+[![Interface](https://img.shields.io/badge/Interface-Terminal%2FCLI-green)](README.md)
+
+## Features
+
+### Core Capabilities
+- **Real-time Audio Recognition** - Identify songs playing around you in seconds via terminal interface
+- **Multi-format Support** - Process MP3, WAV, FLAC, M4A, AAC, OGG, and WMA files
+- **Advanced Fingerprinting** - Constellation mapping algorithm for robust audio signatures
+- **Database Management** - Efficient SQLite storage with automatic optimization
+- **Batch Processing** - Upload entire music libraries with recursive folder scanning
+- **Interactive Terminal Interface** - Professional command-line interface with progress trackingudio Identification System
 
 > *Inspired by Shazam, Hocus Pocus brings real-time audio identification to your fingertips*
 
@@ -23,6 +40,7 @@
 - **Optimized Matching** - Fast database queries with indexed fingerprint lookup
 - **Audio Visualization** - Generate spectrograms and constellation maps
 - **Background Processing** - Non-blocking audio analysis and database operations
+- **Modular Architecture** - Clean separation of concerns with dedicated CLI, core, and audio modules
 
 ## Quick Start
 
@@ -82,9 +100,9 @@ Hocus Pocus automatically optimizes your database for performance:
 
 ```bash
 Database Statistics:
-Total songs: 1,234
-Total fingerprints: 2,345,678
-Database size: 45.2 MB
+Total songs: 1,928
+Total fingerprints: 85,748,924
+Database size: 4.27 GB
 Status: Optimized
 ```
 
@@ -107,6 +125,11 @@ src/
 │   ├── audio_recorder.py        # Microphone recording
 │   ├── spectrogram_processor.py # FFT analysis
 │   └── audio_visualizer.py      # Plotting and visualization
+├── cli/             # Terminal interface components
+│   ├── database_optimizer.py    # Database optimization
+│   ├── folder_upload.py         # Batch upload functionality
+│   ├── identification.py        # Audio identification
+│   └── interface.py             # User interface and display
 ├── core/            # Core identification engine
 │   ├── engine.py                # Main orchestration
 │   └── fingerprint_generator.py # Constellation mapping
@@ -160,9 +183,10 @@ PERFORMANCE_CONFIG = {
 ### Benchmark Results
 
 - **Identification Time**: < 3 seconds for 10-second clips
-- **Database Capacity**: Tested with 10,000+ songs
+- **Database Capacity**: Currently optimized with 1,928 songs and 85.7M+ fingerprints
 - **Memory Usage**: ~50MB for typical database operations
-- **Storage Efficiency**: ~200KB per 3-minute song (fingerprints only)
+- **Storage Efficiency**: ~2.3MB per song (including fingerprints and metadata)
+- **Database Performance**: 4.27GB optimized database with indexed fingerprint lookup
 
 ### Accuracy Metrics
 
@@ -188,11 +212,14 @@ PERFORMANCE_CONFIG = {
 
 ```
 ├── src/                # Source code
+│   ├── audio/          # Audio processing components
+│   ├── cli/            # Terminal interface modules
+│   ├── core/           # Core identification engine
+│   └── database/       # Data persistence layer
 ├── data/               # Database storage
 ├── output/             # Generated visualizations
 ├── tools/              # Utility scripts
 ├── tests/              # Test suite
-├── docs/               # Documentation
 ├── config.py           # Configuration settings
 ├── main.py             # Entry point
 └── pyproject.toml      # Project metadata

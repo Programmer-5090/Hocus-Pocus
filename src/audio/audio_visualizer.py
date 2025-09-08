@@ -79,7 +79,7 @@ class AudioVisualizer:
         # Save plot if path specified
         if save_path:
             plt.savefig(save_path, dpi=150, bbox_inches='tight', facecolor='white')
-            print(f"📊 Spectrogram saved to: {save_path}")
+            print(f"Spectrogram saved to: {save_path}")
         
         # Display plot if requested (typically not used in batch processing)
         if show_plot:
@@ -136,7 +136,7 @@ class AudioVisualizer:
         # Save plot if path specified
         if save_path:
             plt.savefig(save_path, dpi=150, bbox_inches='tight', facecolor='white')
-            print(f"🔍 Peaks plot saved to: {save_path}")
+            print(f"Peaks plot saved to: {save_path}")
         
         # Display plot if requested
         if show_plot:
@@ -196,7 +196,7 @@ class AudioVisualizer:
         # Save plot if path specified
         if save_path:
             plt.savefig(save_path, dpi=150, bbox_inches='tight', facecolor='white')
-            print(f"📈 Combined analysis plot saved to: {save_path}")
+            print(f"Combined analysis plot saved to: {save_path}")
         
         # Display plot if requested
         if show_plot:

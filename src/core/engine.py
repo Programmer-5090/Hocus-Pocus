@@ -119,9 +119,9 @@ class Engine:
             Dictionary containing comprehensive analysis results from the recorded audio,
             including the file path where the recording was saved.
         """
-        print("🎤 Recording audio from microphone...")
+        print("Recording audio from microphone...")
         recorded_file_path = self.audio_recorder.record()
-        print(f"📁 Recorded audio saved to: {recorded_file_path}")
+        print(f"Recorded audio saved to: {recorded_file_path}")
         
         # Process the recorded audio file
         analysis_results = self.process_audio_file(recorded_file_path)
@@ -147,7 +147,7 @@ class Engine:
         Raises:
             Exception: If audio processing or database operations fail
         """
-        print(f"🎵 Processing and adding song: {title}")
+        print(f"Processing and adding song: {title}")
         
         # Perform comprehensive audio analysis
         analysis_results = self.process_audio_file(file_path)
@@ -164,8 +164,8 @@ class Engine:
         fingerprint_count = len(analysis_results['fingerprints'])
         self.db_manager.add_fingerprints(song_id, analysis_results['fingerprints'])
         
-        print(f"✅ Added song '{title}' with ID {song_id}")
-        print(f"🔑 Generated {fingerprint_count:,} fingerprints")
+        print(f"Added song '{title}' with ID {song_id}")
+        print(f"Generated {fingerprint_count:,} fingerprints")
         
         return song_id
     
@@ -189,7 +189,7 @@ class Engine:
             - 'scores': Dictionary of match scores for all candidates
             - Additional match details if a match is found
         """
-        print(f"🔍 Identifying song from: {file_path}")
+        print(f"Identifying song from: {file_path}")
         
         # Process the query audio file
         analysis_results = self.process_audio_file(file_path)

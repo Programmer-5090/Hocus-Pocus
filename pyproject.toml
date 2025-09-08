@@ -8,7 +8,7 @@ version = "1.0.0"
 authors = [
     {name = "Programmer-5090"},
 ]
-description = "Real-time audio identification system inspired by Shazam"
+description = "Terminal-based real-time audio identification system inspired by Shazam"
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.8"
@@ -39,7 +39,11 @@ keywords = [
     "recognition",
     "dsp",
     "spectrogram",
-    "fft"
+    "fft",
+    "terminal",
+    "cli",
+    "command-line",
+    "modular"
 ]
 
 dependencies = [

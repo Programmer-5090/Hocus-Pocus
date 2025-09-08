@@ -363,8 +363,8 @@ class DatabaseManager:
         # Get database size before optimization
         size_before = os.path.getsize(self.db_path) if os.path.exists(self.db_path) else 0
         
-        print("🔧 Starting database optimization...")
-        print("📊 Converting binary fingerprint data to optimized integers...")
+        print("Starting database optimization...")
+        print("Converting binary fingerprint data to optimized integers...")
         
         with self.get_connection() as conn:
             cursor = conn.cursor()
@@ -381,7 +381,7 @@ class DatabaseManager:
                     'size_after': size_before
                 }
             
-            print(f"🔍 Processing {total_fingerprints:,} fingerprints...")
+            print(f"Processing {total_fingerprints:,} fingerprints...")
             
             # Process in batches to avoid memory issues
             batch_size = 10000
@@ -432,16 +432,16 @@ class DatabaseManager:
                 # Show progress every 100k records
                 if processed % 100000 == 0:
                     progress = (processed / total_fingerprints) * 100
-                    print(f"⚡ Progress: {processed:,}/{total_fingerprints:,} ({progress:.1f}%) - Converted: {converted:,}")
+                    print(f"Progress: {processed:,}/{total_fingerprints:,} ({progress:.1f}%) - Converted: {converted:,}")
             
             # Commit all changes
             conn.commit()
             
             # Vacuum the database to reclaim space
-            print("🧹 Vacuuming database to reclaim space...")
+            print("Vacuuming database to reclaim space...")
             cursor.execute("VACUUM")
             
-            print(f"✅ Optimization complete! Converted {converted:,} fingerprints")
+            print(f"Optimization complete! Converted {converted:,} fingerprints")
         
         # Get database size after optimization
         size_after = os.path.getsize(self.db_path)
